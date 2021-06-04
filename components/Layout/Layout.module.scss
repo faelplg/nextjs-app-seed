@@ -1,0 +1,6 @@
+@import '../../styles/base/variables';
+
+.Main {
+  height: calc(100% - #{$size-navbar});
+  overflow-y: auto;
+}

@@ -1,0 +1,68 @@
+@import '../../styles/base/variables';
+
+.Form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  input {
+    display: block;
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    letter-spacing: 0.06em;
+    line-height: 3.2rem;
+    margin: 0.8rem 0;
+    padding: 0.8rem 1.6rem;
+    border-radius: 4px;
+    background-color: darken($background-color, 8%);
+    border: none;
+    border-bottom: 3px solid $background-color-dark;
+    transition: all .3s;
+  }
+
+  input:hover,
+  input:focus {
+    border-bottom: 3px solid $color-primary-light;
+    background-color: darken($background-color, 4%);
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: $box-shadow-sm;
+    background-color: $background-color
+  }
+
+  input.Dark {
+    background-color: darken($background-color-dark, 8%);
+    color: $font-color-light;
+    border-bottom: 3px solid $background-color;
+  }
+
+  input.Dark:hover,
+  input.Dark:focus {
+    border-bottom: 3px solid $color-secondary;
+    background-color: darken($background-color-dark, 4%);
+  }
+  input.Dark:focus {
+    background-color: $background-color-dark;
+  }
+
+  input.Errors,
+  input.Errors:hover,
+  input.Errors:focus {
+    border-bottom: 3px solid $color-status-warning;
+  }
+
+  input.Dark::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lighten($font-color-display, 16%);
+  }
+  input.Dark::-moz-placeholder { /* Firefox 19+ */
+    color: lighten($font-color-display, 16%);
+  }
+  input.Dark:-ms-input-placeholder { /* IE 10+ */
+    color: lighten($font-color-display, 16%);
+  }
+  input.Dark:-moz-placeholder { /* Firefox 18- */
+    color: lighten($font-color-display, 16%);
+  }
+}

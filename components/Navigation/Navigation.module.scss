@@ -1,0 +1,21 @@
+@import '../../styles/base/mixins';
+@import '../../styles/base/variables';
+
+.Navigation {
+  display: flex;
+  align-items: center;
+  padding: $rem-xs $rem-sm;
+}
+
+.Navigation > ul {
+  display: flex;
+  list-style: none;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.Navigation,
+.NavigationSurface {
+  height: 7.2rem;
+}

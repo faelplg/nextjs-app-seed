@@ -1,0 +1,1 @@
+export const TOKEN_KEY = 'co3in.auth.local.token';

@@ -1,0 +1,96 @@
+/// @type color
+$background-color: #ECE0E8;
+/// @type color
+$background-color-light: #F5F5F6;
+/// @type color
+$background-color-dark: #222222;
+/// @type color
+$background-color-display: #E1E2E1;
+/// @type color
+$background-color-display-dark: #424242;
+/// @type color
+$background-backdrop: rgba(34, 34, 34, 0.6);
+
+/// @group FX
+$border-radius: 4px;
+
+/// @group FX
+$box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.25);
+/// @group FX
+$box-shadow-sm: 0px 4px 4px rgba(0, 0, 0, 0.25);
+/// @group FX
+$box-shadow-xs: 0 1px 2px -1px rgba(0,0,0,.2), 0 2px 3px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+/// @group FX
+$box-shadow-inset: inset 2px 2px 16px 8px rgba(22, 22, 22, 0.6);
+/// @group FX
+$box-shadow-inset-dark: inset 0px 8px 6px rgba(0, 0, 0, 0.4);
+
+/// @type color
+/// @group colors
+$color-primary: #1E0B36;
+/// @type color
+/// @group colors
+$color-primary-light: #755B8E;
+/// @type color
+/// @group colors
+$color-primary-dark: #483160;
+/// @type color
+/// @group colors
+$color-secondary: #CA3782;
+/// @type color
+/// @group colors
+$color-secondary-light: #FF6CB1;
+/// @type color
+/// @group colors
+$color-secondary-dark: #950056;
+
+/// @type color
+/// @group colors
+$color-complementary-1: #25b664;
+/// @type color
+/// @group colors
+$color-complementary-1-dark: #187641;
+/// @type color
+/// @group colors
+$color-complementary-1-darkest: #0b361e;
+/// @type color
+/// @group colors
+$color-complementary-2: #37cac9;
+/// @type color
+/// @group colors
+$color-complementary-2-dark: #268f8e;
+/// @type color
+/// @group colors
+$color-complementary-2-darkest: #165352;
+
+/// @type color
+/// @group colors
+$color-status-normal: #2196f3;
+/// @type color
+/// @group colors
+$color-status-warning: #ef5350;
+
+/// @type color
+/// @group colors
+$font-color: #230A1B;
+/// @type color
+/// @group colors
+$font-color-display: #888888;
+/// @type color
+/// @group colors
+$font-color-light: #ffffff;
+
+/// @group spacing
+$rem-xs: 0.8rem;
+/// @group spacing
+$rem-sm: 1.6rem;
+/// @group spacing
+$rem-md: 3.2rem;
+/// @group spacing
+$rem-lg: 6.4rem;
+/// @group spacing
+$rem-xl: 12.8rem; 
+
+/// @group sizing
+$size-navbar: 7.2rem;
+$size-footer: 8rem;

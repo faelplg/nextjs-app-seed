@@ -1,0 +1,17 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
+
+.Login {
+  padding: $rem-sm;
+  width: 32rem;
+  height: auto;
+
+  @include respond(phone) {
+    width: 100%;
+    margin: 1.6rem;
+  }
+}
+
+.Login.Dark {
+  background-color: $background-color-display;
+}

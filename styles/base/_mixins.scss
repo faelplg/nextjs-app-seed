@@ -1,0 +1,74 @@
+////
+/// Mixins
+/// @group Abstracts
+/// @author Rafael Goulart (faelplg)
+////
+
+// @mixin clearfix {
+//   &::after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+// }
+
+/// Absolute center.
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/// Sticky element.
+@mixin stickyElement {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+/// Responsivity strategy.
+///
+/// `$breakpoint` options:
+/// - phone (0 - 600px)
+/// - tab-port (600 - 900px)
+/// - tab-land (900 - 1200px)
+/// - big-desktop (1800px+)
+/// @param {String} $breakpoint - Responsivity type
+///
+/// @example scss - Set responsivity.
+///   @include respond(phone) {
+///     font-size: 50%;
+///   }
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-land {
+    @media (max-height: 25.75em) {
+      @content;
+    } // < 412px
+  }
+  @if $breakpoint == tab-mini-land {
+    @media (max-height: 33.75em) {
+      @content;
+    } // < 540px
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } // < 600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } // < 900px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    } // < 1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } // > 1800px
+  }
+}

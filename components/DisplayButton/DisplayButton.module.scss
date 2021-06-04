@@ -1,0 +1,79 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
+
+a.Card {
+  cursor: pointer;
+  margin: 1rem;
+  flex: 0 1 auto;
+  display: flex;
+  padding: 1.6rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid $font-color;
+  border-radius: 10px;
+  min-width: 20rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  @include respond(phone) {
+    flex: auto;
+  }
+}
+a.Card.Dark {
+  border: 1px solid $font-color-light;
+}
+
+a.Card.Reverse {
+  justify-content: flex-end;
+}
+a.Card:hover,
+a.Card:focus {
+  color: $color-primary-light;
+  border-color: $color-primary-light;
+  & > .Card__ArrowLeft {
+    margin-right: 1.6rem;
+  }
+  & > .Card__ArrowRight {
+    margin-left: 1.6rem;
+  }
+  & > .Card__TextLeft {
+    margin-left: 0;
+  }
+  & > .Card__TextRight {
+    margin-right: 0;
+  }
+}
+a.Card:active {
+  color: $color-primary;
+  border-color: $color-primary;
+}
+.Card.Dark:hover,
+.Card.Dark:focus {
+  color: $color-secondary-light;
+  border-color: $color-secondary-light;
+}
+.Card.Dark:active {
+  color: $color-secondary-dark;
+  border-color: $color-secondary-dark;
+}
+.Card.Warning:hover,
+.Card.Warning:focus {
+  color: $color-status-warning;
+  border-color: $color-status-warning;
+}
+
+.Card__ArrowLeft {
+  margin-right: 0.4rem;
+  transition: margin 0.2s ease;
+}
+.Card__ArrowRight {
+  margin-left: 0.4rem;
+  transition: margin 0.2s ease;
+}
+.Card__TextLeft {
+  margin-left: 0.4rem;
+  transition: margin 0.3s ease;
+}
+.Card__TextRight {
+  margin-right: 0.4rem;
+  transition: margin 0.3s ease;
+}

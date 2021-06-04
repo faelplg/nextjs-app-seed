@@ -1,0 +1,153 @@
+////
+/// Typography styles.
+/// @group Typography
+/// @author Rafael Goulart (faelplg)
+////
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Ubuntu:wght@300;400;800&family=Lato:wght@400;700&display=swap');
+
+// Available fonts:
+//
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Fira Code', monospace;
+
+/// Default typography.
+body,
+p,
+.text--body {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 0;
+}
+
+/// Text caption.
+caption,
+.text--caption {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 3.2rem;
+}
+
+/// Text code.
+code,
+.text--code {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 2.8rem;
+}
+
+/// Lato styled elements.
+h1,
+h2,
+h3,
+h4,
+.text--subhead,
+.text--menu,
+.text--button,
+button {
+  font-family: 'Lato', sans-serif;
+}
+
+/// Subtitle.
+h2,
+.text--subhead {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+/// Menu.
+h3,
+.text--menu {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+/// Button.
+h4,
+button,
+.text--button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/// Lato Condensed styled elements.
+.text--title,
+.text--headline,
+.text--display-1,
+.text--display-2,
+.text--display-3,
+.text--display-4 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/// Title.
+h1,
+.text--title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 4.4rem;
+}
+
+/// Headline.
+.text--headline {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 4.4rem;
+  letter-spacing: 0.032rem;
+  text-transform: uppercase;
+}
+
+/// Display 1.
+.text--display-1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.4rem;
+  line-height: 5.2rem;
+}
+
+/// Display 2.
+.text--display-2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.5rem;
+  line-height: 6.4rem;
+}
+
+/// Display 3.
+.text--display-3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+}
+
+/// Display 4.
+.text--display-4 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.2rem;
+  line-height: 12.8rem;
+}
+
+/// Paragraph modifier.
+p {
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}

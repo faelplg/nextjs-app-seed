@@ -1,0 +1,72 @@
+@import '../../styles/base/variables'; 
+
+.Button, .Button:focus {
+  background-color: $color-primary-dark;
+  color: $font-color-light;
+  border-radius: $border-radius;
+  height: 4.8rem;
+  border: none;
+  padding: $rem-xs $rem-sm;
+  cursor: pointer;
+  box-shadow: $box-shadow-xs;
+  transition: all 0.16s linear;
+}
+
+.Button:hover {
+  background-color: $color-primary-light;
+  box-shadow: $box-shadow-sm;
+}
+
+.Button:focus, .Button:active {
+  outline: none;
+}
+
+.Button:active {
+  background-color: $color-primary;
+  box-shadow: unset;
+}
+
+.Button.Dark {
+  background-color: $color-secondary;
+  color: $font-color;
+}
+.Button.Dark:hover {
+  background-color: $color-secondary-light;
+}
+
+.Button.Dark:focus, .Button.Dark:active {
+  outline: none;
+}
+
+.Button.Dark:active {
+  background-color: $color-secondary-dark;
+  box-shadow: unset;
+}
+
+.Button.Submit {
+  background-color: $color-primary-dark;
+  color: $font-color-light;
+  margin: 0.8rem 0;
+}
+.Button.Submit:hover {
+  background-color: $color-primary-light;
+  color: $font-color-light;
+  margin: 0.8rem 0;
+}
+.Button.Submit:active {
+  background-color: $color-primary;
+  box-shadow: unset;
+}
+
+.Button.Submit.Dark {
+  background-color: $color-secondary;
+  color: $font-color;
+}
+.Button.Submit.Dark:hover {
+  background-color: $color-secondary-light;
+  color: $font-color;
+}
+.Button.Submit.Dark:active {
+  background-color: $color-secondary-dark;
+  box-shadow: unset;
+}
