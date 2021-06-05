@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import {
   Formik, Form, Field
 } from 'formik';
-import { FormError } from './component.style';
-import { DarkModeContext } from '../../contexts/darkMode.context';
-import Button from '../Button';
-import styles from './Form.module.scss';
-import {validationSchema} from './Form.settings';
+import { FormError } from '../component.style';
+import { DarkModeContext } from '../../../contexts/darkMode.context';
+import Button from '../../Button';
+import styles from '../Form.module.scss';
+import {loginInitialValues, loginValidationSchema} from '../Form.settings';
 
 const FormGenerator = ({ formSubmit }) => {
   console.log('[Form]: component rendering...');
@@ -15,15 +15,15 @@ const FormGenerator = ({ formSubmit }) => {
 
   const handleSubmit = ({identifier, password}, setSubmitting) => {
     const requestObject = { identifier, password };
-    console.log('[Form]: handleSubmit - identifier, password', identifier, password);
+    console.log('[FormLogin]: handleSubmit - identifier, password', identifier, password);
     formSubmit(requestObject);
     setSubmitting(false);
   };
 
   return (
     <Formik
-      initialValues={{ identifier: '', password: '' }}
-      validate={validationSchema}
+      initialValues={loginInitialValues}
+      validate={loginValidationSchema}
       onSubmit={(values, { setSubmitting }) => {
         handleSubmit(values, setSubmitting);
       }}

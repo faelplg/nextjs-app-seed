@@ -65,13 +65,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Cococoin</title>
+        <title>fael.tech</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout type="with-navbar">
         <Container bgDark={darkMode} full>
           <Logo lightSrc={logo} layout="logo-vertical" />
-          <code style={{marginTop: '1.6rem'}}>Technology, activism, and ocean conservation</code>
+          <code style={{marginTop: '1.6rem'}}>Technology, activism, and ocean conservation.</code>
           <CardsContainer>
             {!appLoading && user && (
               <DisplayButton href="/wallet" buttonText="Wallet" darkMode={darkMode} />
@@ -99,15 +99,7 @@ export default function Home() {
         <Footer bgDisplayDark={darkMode} bgLight={!darkMode}>
           <footer>
             <p>
-              Powered by{' '}
-              <LinkA
-                darkMode={darkMode}
-                href="https://www.facebook.com/opiorblocodomundo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                O Pior Bloco do Mundo
-              </LinkA>
+              Social link 1 Social link 2
             </p>
           </footer>
         </Footer>

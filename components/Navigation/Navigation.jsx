@@ -14,7 +14,7 @@ const Navigation = () => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
-    <Surface className={styles.NavigationSurface} bgDark={darkMode} bgLight={!darkMode}>
+    <Surface className={styles.NavigationSurface} bgDisplayDark={darkMode} bgLight={!darkMode}>
       <Nav flex className={styles.Navigation} shadow>
         <Box grow flex>
           <Logo layout="logo-sm" lightSrc="/logo-sm.png" darkMode={darkMode} darkSrc="/logo-sm-dark.png" />

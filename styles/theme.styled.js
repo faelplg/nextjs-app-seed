@@ -16,7 +16,7 @@ export const theme = {
     backgroundLight: '#F5F5F6',
     backgroundDark: '#222222',
     backgroundDisplay: '#E1E2E1',
-    backgroundDisplayDark: '#424242',
+    backgroundDisplayDark: '#1b1b1b',
     complementary1: '#25b664',
     complementary1Dark: '#187641',
     complementary1Darkest: '#0b361e',

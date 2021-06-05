@@ -26,6 +26,12 @@
   box-shadow: unset;
 }
 
+.Button:disabled {
+  background-color: $background-color-display;
+  color: $font-color-display;
+  box-shadow: unset;
+}
+
 .Button.Dark {
   background-color: $color-secondary;
   color: $font-color;

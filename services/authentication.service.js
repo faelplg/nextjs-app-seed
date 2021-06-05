@@ -29,7 +29,7 @@ export const login = (identifier, password) => {
 
   return new Promise((resolve, reject) => {
     api
-      .post(`/auth/local/`, {identifier, password})
+      .post('/auth/local/', {identifier, password})
       .then((res) => {
         // set token response from Strapi for server validation
         Cookie.set(TOKEN_KEY, res.data.jwt);
@@ -40,6 +40,35 @@ export const login = (identifier, password) => {
       .catch((err) => {
         // reject the promise and pass the error object back to the form
         reject(err);
+      });
+  });
+};
+
+/**
+ * Register method
+ * @param {string} username
+ * @param {string} identifier
+ * @param {password} password
+ * @returns Promise
+ */
+export const registerUser = (username, email, password) => {
+  //prevent function from being ran on the server
+  if (typeof window === "undefined") {
+    return;
+  }
+  return new Promise((resolve, reject) => {
+    api
+      .post('/auth/local/register', { username, email, password })
+      .then((res) => {
+        //set token response from Strapi for server validation
+        Cookie.set(TOKEN_KEY, res.data.jwt);
+
+        //resolve the promise to set loading to false in SignUp form
+        resolve(res);
+      })
+      .catch((error) => {
+        //reject the promise and pass the error object back to the form
+        reject(error);
       });
   });
 };

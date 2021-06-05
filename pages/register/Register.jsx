@@ -6,9 +6,9 @@ import {DarkModeContext} from '../../contexts/darkMode.context';
 import {LoaderContext} from '../../contexts/loader.context';
 import Layout from '../../components/Layout';
 import {Surface} from '../../styles/theme.styled';
-import Form from '../../components/Form';
+import FormRegister from '../../components/Form/FormRegister';
 import styles from './Register.module.scss';
-import {login, isAuthenticated, logout} from '../../services/authentication.service';
+import {registerUser, isAuthenticated, logout} from '../../services/authentication.service';
 
 const Register = () => {
   console.log('%c[Register]: page rendering...', 'color: #b8e5fa; background: #222; padding: 8px;');
@@ -16,10 +16,10 @@ const Register = () => {
   const {setUser} = useContext(AppContext);
   const {setHeavyLoading} = useContext(LoaderContext);
 
-  const handleFormSubmit = async ({identifier, password}) => {
+  const handleFormSubmit = async ({username, email, password}) => {
     setHeavyLoading(true);
     if (isAuthenticated) await logout();
-    await login(identifier, password)
+    await registerUser(username, email, password)
       .then((res) => {
         console.log('[Register]: res', res);
         setUser(res.data.user);
@@ -36,22 +36,22 @@ const Register = () => {
   return (
     <>
       <Head>
-        <title>Cococoin</title>
+        <title>fael.tech</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Surface flex bgDisplay={darkMode} alignCenter justifyCenter full>
+        <Surface flex bgDark={darkMode} alignCenter justifyCenter full>
           <Surface
             flex
             column
-            bgDark={darkMode}
+            bgDisplayDark={darkMode}
             bgLight={!darkMode}
             className={styles.Register}
             round
             shadow
           >
             <h1>Register</h1>
-            <Form dark={darkMode} formSubmit={handleFormSubmit} />
+            <FormRegister dark={darkMode} formSubmit={handleFormSubmit} />
           </Surface>
         </Surface>
       </Layout>

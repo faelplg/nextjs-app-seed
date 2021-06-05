@@ -6,7 +6,7 @@ import {DarkModeContext} from '../../contexts/darkMode.context';
 import {LoaderContext} from '../../contexts/loader.context';
 import Layout from '../../components/Layout';
 import {Surface} from '../../styles/theme.styled';
-import Form from '../../components/Form';
+import FormLogin from '../../components/Form/FormLogin';
 import styles from './Login.module.scss';
 import {login, isAuthenticated, logout} from '../../services/authentication.service';
 
@@ -36,7 +36,7 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>Cococoin</title>
+        <title>fael.tech</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
@@ -51,7 +51,7 @@ const Login = () => {
             shadow
           >
             <h1>Login</h1>
-            <Form dark={darkMode} formSubmit={handleFormSubmit} />
+            <FormLogin dark={darkMode} formSubmit={handleFormSubmit} />
           </Surface>
         </Surface>
       </Layout>
